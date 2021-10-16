@@ -1,4 +1,6 @@
 package com.company;
+import com.company.Person;
+
 
 // Static methods can be called without creating objects
 // Public methods must be called by creating objects
@@ -14,6 +16,7 @@ package com.company;
 */
 
 // java file should match the class name
+
 
 
 public class Main
@@ -52,6 +55,14 @@ public class Main
 
         myObjy.printStatic();
         myObjy.printPublic();
+
+        Person Pep = new Person();
+
+        System.out.println(Pep.getName());  // Marc
+        Pep.setName("Pep");
+        System.out.println(Pep.getName());  // Pep
+
+
 
     }
 }
