@@ -1,12 +1,36 @@
 package com.company;
 
-
 // Static methods can be called without creating objects
 // Public methods must be called by creating objects
 
+/*
+
+    The dot (.) is used to access the object's attributes and methods.
+
+    To call a method in Java, write the method name followed by a set of parentheses (), followed by a semicolon (;).
+
+    A class must have a matching filename (Main and Main.java).
+
+*/
+
+// java file should match the class name
+
+
 public class Main
 {
-    int y = 10;
+    // atributs
+    int x;
+    int y;
+
+    public Main()   // Constructor per setejar valors inicials d'un objecte
+    {
+        y = 11;
+    }
+
+    public Main(int z)   // Constructor per setejar valors inicials d'un objecte
+    {
+        x = z;
+    }
 
     public void printStatic()
     {
@@ -20,13 +44,14 @@ public class Main
 
     public static void main(String[] args)
     {
-        Main myObj = new Main();
+        Main myObjy = new Main();    // Es crida al constructor al crear l'objecte
+        Main myObjx = new Main(8);
 
-        System.out.println(myObj.y);
+        System.out.println(myObjy.y);
+        System.out.println(myObjx.x);
 
-        myObj.printStatic();
-        myObj.printPublic();
+        myObjy.printStatic();
+        myObjy.printPublic();
 
-	// write your code here
     }
 }
