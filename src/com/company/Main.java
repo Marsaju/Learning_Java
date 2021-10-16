@@ -1,5 +1,6 @@
 package com.company;
-import com.company.Person;
+import java.util.Scanner;   // User input class from keyboard
+import com.company.Person;  // Importem la classe Person per poder treballar amb ella
 
 
 // Static methods can be called without creating objects
@@ -35,7 +36,7 @@ public class Main
         x = z;
     }
 
-    public void printStatic()
+    static void printStatic()
     {
         System.out.println("Static methods can be called without creating objects");
     }
@@ -53,7 +54,7 @@ public class Main
         System.out.println(myObjy.y);
         System.out.println(myObjx.x);
 
-        myObjy.printStatic();
+        printStatic();
         myObjy.printPublic();
 
         Person Pep = new Person();
@@ -63,6 +64,12 @@ public class Main
         System.out.println(Pep.getName());  // Pep
 
 
+        // input data from keyboard
+        Scanner inputUser = new Scanner(System.in);
+
+        System.out.println("Introducí user pa");
+        String userName = inputUser.nextLine();
+        System.out.println("Username is: " + userName);
 
     }
 }
