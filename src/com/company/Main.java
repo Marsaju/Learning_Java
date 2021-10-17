@@ -2,7 +2,7 @@ package com.company;
 import java.util.Scanner;   // User input class from keyboard
 import com.company.Person;  // Importem la classe Person per poder treballar amb ella
 import com.company.Vehicle;
-
+import com.company.OuterClass; // inner Class
 
 // java.util package ==> date and time facilities, random-number generator and other utility classes.
 
@@ -88,7 +88,21 @@ public class Main
         myCar.Sound();
         System.out.println(myCar.brand + " " + myCar.getModel());
 
+        // Inner Class
 
+        // Si la subclasse és private, no es pot accedir desde fora, si es static si
+        // Static, accedida desde fora, ella no pot accedir a la Outer class
+
+        OuterClass myOuter = new OuterClass();
+        OuterClass.InnerClass myInner = new OuterClass.InnerClass();
+        System.out.println(myInner.getY());
+
+        /* Si la Inner no porta private/protected/static
+        -- Main:
+            OuterClass myOuter = new OuterClass();
+            OuterClass.InnerClass myInner = myOuter.new InnerClass();
+            System.out.println(myInner.myInnerMethod());
+        */
 
     }
 }
