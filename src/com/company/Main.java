@@ -38,7 +38,7 @@ enum Level
 {
     LOW,
     MEDIUM,
-    HiGH
+    HIGH
 }
 
 
@@ -195,6 +195,34 @@ public class Main
                 Iterator<String> it = theCar.iterator();
                 System.out.println(it.next());
         */
+
+
+        // Exceptions
+
+            try
+            {
+                int[] myNumbers = {1, 2, 3};
+                System.out.println(myNumbers[10]);
+            }
+            catch (Exception a)
+            {
+                System.out.println("Something went wrong.");
+            }
+
+        /*
+            if (age < 18)
+            {
+              throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+            }
+        */
+
+
     }
+
+
+
+
+
+
 
 }
