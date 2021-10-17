@@ -1,6 +1,13 @@
 package com.company;
 import java.util.Scanner;   // User input class from keyboard
 import com.company.Person;  // Importem la classe Person per poder treballar amb ella
+import com.company.Vehicle;
+
+
+// java.util package ==> date and time facilities, random-number generator and other utility classes.
+
+
+import com.company.Person;  // Importem la classe Person per poder treballar amb ella
 
 
 // Static methods can be called without creating objects
@@ -70,6 +77,18 @@ public class Main
         System.out.println("Introducí user pa");
         String userName = inputUser.nextLine();
         System.out.println("Username is: " + userName);
+
+
+        // Herencia (herencia atributs i mètodes) & Polimorfism (mateixos mètodes en diferents obj's => Same metode diferent content)
+
+        Vehicle cotxe = new Vehicle();
+        cotxe.Sound();
+
+        Car myCar = new Car();
+        myCar.Sound();
+        System.out.println(myCar.brand + " " + myCar.getModel());
+
+
 
     }
 }
