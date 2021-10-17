@@ -3,6 +3,8 @@ import java.util.Scanner;   // User input class from keyboard
 import com.company.Person;  // Importem la classe Person per poder treballar amb ella
 import com.company.Vehicle;
 import com.company.OuterClass; // inner Class
+import com.company.Animal;
+
 
 // java.util package ==> date and time facilities, random-number generator and other utility classes.
 
@@ -103,6 +105,15 @@ public class Main
             OuterClass.InnerClass myInner = myOuter.new InnerClass();
             System.out.println(myInner.myInnerMethod());
         */
+
+
+        // Abstract classes & methods
+        // => interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+        Pig myPig = new Pig();
+        myPig.animalSound();
+        myPig.sleep();
+
 
     }
 }
