@@ -28,6 +28,14 @@ import com.company.Person;  // Importem la classe Person per poder treballar amb
 // java file should match the class name
 
 
+//enum
+enum Level
+{
+    LOW,
+    MEDIUM,
+    HiGH
+}
+
 
 public class Main
 {
@@ -113,6 +121,12 @@ public class Main
         Pig myPig = new Pig();
         myPig.animalSound();
         myPig.sleep();
+
+        // enum (constant)
+        for(Level myVar : Level.values())
+        {
+            System.out.println(myVar);
+        }
 
 
     }
